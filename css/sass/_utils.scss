@@ -1,0 +1,87 @@
+@use 'mixin' as m;
+
+.section-title {
+    margin-bottom: 80px;
+
+    @include m.tab {
+        margin-bottom: 50px;
+    }
+
+    &-en {
+        font-size: 6rem;
+        opacity: 0.2;
+        line-height: 1;
+
+        @include m.tab {
+            font-size: 3rem;
+        }
+    }
+
+    &-jp {
+        font-size: 1.5rem;
+        position: relative;
+        margin-left: 20px;
+        display: inline-block;
+
+        @include m.tab {
+            display: none;
+        }
+
+        &::before {
+            position: absolute;
+            content: "";
+            height: 1px;
+            width: 10px;
+            background-color: #1F2F52;
+            top: 50%;
+            left: -18px;
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            height: 1px;
+            width: 10px;
+            background-color: #1F2F52;
+            top: 50%;
+            right: -18px;
+        }
+    }
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.fadein {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 0.8s ease-out;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.zoomin {
+    opacity: 0;
+    transform: scale(0.5);
+    transition: all 1s ease-out;
+}
+
+.zoomshow {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+section {
+    padding-bottom: 150px;
+
+    @include m.tab {
+        padding-bottom: 100px;
+    }
+}

@@ -1,0 +1,36 @@
+html {
+    font-size: 100%;
+    background-color: #EAEFFA;
+    font-family: "Hina Mincho", serif;
+}
+
+
+img {
+    vertical-align: bottom;
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+a,
+li {
+    margin: 0;
+    padding: 0;
+    color: #1F2F52;
+    font-weight: 300;
+    display: block;
+    letter-spacing: 0.2rem;
+}
+
+a {
+    text-decoration: none;
+    color: #1F2F52;
+    display: inline-block;
+}
+
+li {
+    list-style: none;
+}

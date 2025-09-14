@@ -1,0 +1,66 @@
+@use 'mixin' as m;
+
+// =====下層ページ_Program===============================
+
+.program-content {
+    padding-top: 150px;
+
+    .program-detail {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 80px;
+
+        @include m.tab {
+            flex-direction: column;
+        }
+
+        img.program-img {
+            width: 48%;
+            object-fit: cover;
+
+            @include m.tab {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+        }
+
+        .program-info {
+            width: 48%;
+
+            @include m.tab {
+                width: 100%;
+                border: 1px solid #1F2F52;
+                border-radius: 50px 0;
+                padding: 20px;
+            }
+
+
+            .program-no {
+                font-size: 1.25rem;
+                margin-bottom: 30px;
+
+                @include m.tab {
+                    margin-bottom: 20px;
+                }
+
+                @include m.sp {
+                    font-size: 1rem;
+                }
+            }
+
+            .program-title {
+                font-size: 1.25rem;
+                margin-bottom: 20px;
+
+                @include m.sp {
+                    font-size: 1rem;
+                }
+            }
+
+            .program-text {
+                font-size: 0.875rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,101 @@
+@use 'mixin' as m;
+
+// =====下層ページ_facility===============================
+
+.facility {
+    padding-top: 150px;
+
+    .container {
+        .facility-detail {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 80px;
+            height: 100%;
+
+            @include m.tab {
+                flex-direction: column;
+            }
+
+            .facility-img {
+                width: 45%;
+
+                @include m.tab {
+                    width: 80%;
+                    margin-bottom: 50px;
+                }
+
+                img {
+                    border-radius: 50%;
+                    object-fit: cover;
+                    box-shadow: 10px 10px 20px 7px rgba(0, 0, 0, 0.1);
+                }
+            }
+
+            .facility-info {
+                width: 50%;
+
+
+                @include m.tab {
+                    width: 80%;
+                }
+
+                @include m.sp {
+                    width: 100%;
+                }
+
+                .facility-title {
+                    display: inline-block;
+                    font-size: 1.5rem;
+                    margin-bottom: 30px;
+                    border-bottom: 1px solid #1F2F52;
+                }
+
+                .facility-text {
+                    margin-bottom: 10px;
+                }
+            }
+
+            .seat-imgs {
+                display: flex;
+
+                .seat2 {
+                    width: 90%;
+                    height: 90%;
+                    margin-top: 30%;
+                    margin-left: -10%;
+                }
+
+                .seat1 {
+                    width: 60%;
+                    height: 60%;
+                    margin-left: -40%;
+                    z-index: 2;
+                }
+            }
+
+        }
+
+        @include m.tab {
+            .seat {
+                .facility-info {
+                    order: 2;
+                }
+
+                .facility-img {
+                    order: 1;
+                }
+            }
+
+            .shop {
+                .facility-info {
+                    order: 2;
+                }
+
+                .facility-img {
+                    order: 1;
+                }
+            }
+        }
+    }
+}
